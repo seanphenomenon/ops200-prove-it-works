@@ -7,8 +7,8 @@ describe('Mortgage', () => {
   beforeEach(() => {
     // beforeEach will run before each test. Alternatively, values can be placed specifically here and applied to each test as well.
     mortgageCalculator = new Mortgage();
-
   });
+
   it("should have monthly payment function", () => {
     expect(mortgageCalculator.monthlyPayment).to.exist;
   });

@@ -22,7 +22,6 @@ describe('End to End Tests', (function () {
   });
 
   beforeEach(function (done) {
-    this.timeout(0)
     pageObject = nightmare.goto(url);
 done();
   });
@@ -35,8 +34,7 @@ done();
 
   // This is where your code is going to go
 
-  it.only('should contain an <h1> element for the page title', (function(done){
-    this.timeout(8000);
+  it('should contain an <h1> element for the page title', (function(done){
     return pageObject
       .evaluate(() => document.querySelector('h1').innerText)
       .then(headerText => {
